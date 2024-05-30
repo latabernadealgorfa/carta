@@ -1,0 +1,232 @@
+/*SPLASH*/
+   #splashEduDynamis {
+    position: fixed;
+    /*para que aparezca bien el splash*/
+    top: 0;
+    /*para que aparezca bien el splash*/
+    left: 0;
+    /*para que esté bien colocado el splash*/
+    width: 100%;
+    /*para que ocupe toda la pantalla el splash*/
+    height: 100%;
+    /*para que ocupe toda la altura*/
+    background-color: #000;
+    /*para que el fondo sea blanco*/
+    display: flex;
+    /*para que el splash esté bien centrado*/
+    justify-content: center;
+    /*para que el splash esté bien centrado*/
+    align-items: center;
+    /*para que la imagen ocupe el tamaño bien*/
+    z-index: 9999;
+    /*lo que ocupa el splash*/
+}
+
+.cargandoImagenEduDynamis {
+    width: 100px;
+    /*para que la imagen ocupe el tamaño correcto*/
+    animation: spin 1s linear infinite;
+    /*para que la imagen de vueltas de manera infinita*/
+}
+
+@keyframes spin {
+    100% {
+        transform: translateY(-75%);
+        /*el efecto para que dé vueltas la imagen*/
+    }
+}
+
+@font-face {
+    font-family: "M Ying Hei PRC W48 W7";
+    src: url("../fuentes/85c65430b93c7fed88d053861382678b.eot");
+    src: url("../fuentes/85c65430b93c7fed88d053861382678b.eot?#iefix")format("embedded-opentype"),
+        url("../fuentes/85c65430b93c7fed88d053861382678b.woff")format("woff"),
+        url("../fuentes/85c65430b93c7fed88d053861382678b.woff2")format("woff2"),
+        url("../fuentes/85c65430b93c7fed88d053861382678b.ttf")format("truetype"),
+        url("../fuentes/85c65430b93c7fed88d053861382678b.svg#M Ying Hei PRC W48 W7")format("svg");
+}
+
+@font-face {
+    font-family: 'Conneqt';
+    src: local('Conneqt Regular'), local('Conneqt-Regular'),
+        url('../fuentes/ConneqtRegular.woff2') format('woff2'),
+        url('../fuentes/ConneqtRegular.woff') format('woff'),
+        url('../fuentes/ConneqtRegular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "DyeLine W00 Bold";
+    src: url("../fuentes/b8e095f9fa2a8b236d158a37557fe08f.eot");
+    src: url("../fuentes/b8e095f9fa2a8b236d158a37557fe08f.eot?#iefix")format("embedded-opentype"),
+        url("../fuentes/b8e095f9fa2a8b236d158a37557fe08f.woff")format("woff"),
+        url("../fuentes/b8e095f9fa2a8b236d158a37557fe08f.woff2")format("woff2"),
+        url("../fuentes/b8e095f9fa2a8b236d158a37557fe08f.ttf")format("truetype"),
+        url("../fuentes/b8e095f9fa2a8b236d158a37557fe08f.svg#DyeLine W00 Bold")format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+table {
+    color: white;
+    font-family: "DyeLine W00 Bold";
+    border-left: 32.5px solid rgba(240, 156, 52, 1);
+
+}
+
+body {
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.mayusculas {
+    text-transform: uppercase;
+}
+
+.letraConneqt,
+#tituloCarta {
+    font-family: 'Conneqt';
+}
+
+.aladerecha {
+    text-align: right;
+    padding-right: 2.5%;
+}
+
+#cabecera_primera,
+#lineaCarta {
+    width: 100%;
+}
+
+#cabecera_primera,
+#fastfoodmenu_letra {
+    position: relative;
+}
+
+#cabecera_primera {
+    height: 25%;
+    background-image: url(../imagenes/latabernadelalgorfa.jpeg);
+    background-size: cover;
+}
+
+#fast_food_menu,
+#lineaCarta_Lateral {
+    position: absolute;
+}
+
+#fast_food_menu,
+#fastfoodmenu_letra {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+#fast_food_menu {
+    width: 75%;
+    height: 50%;
+    background-color: rgba(240, 156, 52, 0.75);
+}
+
+#fastfoodmenu_letra,
+#tituloCarta {
+    text-align: center;
+}
+
+#fastfoodmenu_letra {
+    font-family: "M Ying Hei PRC W48 W7";
+    font-size: 50px;
+    margin-top: 0%;
+}
+
+#tituloCarta {
+    color: rgba(240, 156, 52, 0.75);
+}
+
+
+#lineaCarta,
+#lineaCarta_Lateral {
+    background-color: rgba(240, 156, 52, 1);
+
+}
+
+#lineaCarta {
+    height: 0.5%;
+}
+
+#lineaCarta_Lateral {
+    width: 2.5%;
+    height: 100%;
+}
+
+i {
+    color: rgba(240, 156, 52, 0.75);
+}
+
+.letrasTitulos,
+.letrasTitulos2 {
+    padding-top: 20px;
+
+}
+
+
+.letrasTitulos {
+    width: 35%;
+    /*solo se usa para las 2 primeras clases, ya que definiendo el ancho, ya se definen las demás*/
+}
+
+.letrasTitulos2 {
+    padding-left: 4%;
+}
+
+/*ANIMACIÓN DE -> PORDEBAJO*/
+.pordebajo {
+    opacity: 0;
+    /*animación de por debajo*/
+    transform: translateY(100%);
+    /*animación de por debajo*/
+    animation: entradaDesdeAbajo 1s ease-out forwards;
+    /*animación de por debajo*/
+}
+
+@keyframes entradaDesdeAbajo {
+    to {
+        opacity: 1;
+        /*animación de por debajo*/
+        transform: translateX(0);
+        /*animación de por debajo*/
+    }
+}
+
+#flecha_derecha{
+    position: absolute;
+    top: 37.5%;
+    font-size: 35px;
+    right:5%;
+    color:rgb(0, 0, 0);
+    animation: mover 1.5s linear infinite;
+    cursor: pointer;
+    background-color: rgba(240, 156, 52, 1);
+    border-radius: 15%;
+    border:1px solid rgba(240, 156, 52, 1);
+
+}
+
+#flecha_derecha:hover{
+    color:rgba(240, 156, 52, 1);
+    background-color:  rgba(0, 0, 0, 0.75);
+    transition: all 0.35s ease-out;
+    border:1px solid rgba(240, 156, 52, 1);
+}
+
+@keyframes mover {
+    0%, 100% {
+      right: 5; /* Inicio y final: a la izquierda */
+    }
+    50% {
+      right: 2.5%; /* Mitad: a la derecha (ajusta el valor según el tamaño del elemento) */
+    }
+  }
